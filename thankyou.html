@@ -47,7 +47,13 @@
 
     console.log(radio, feedbackMsg);
 
-      //Lägg in och fyll datalagret vid färdig transaktion
+    //Lägg in och fyll datalagret vid färdig transaktion
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      'event': 'orderComplete',
+      'item': {product},
+      'price': {price}
+    });
   </script>
 </body>
 
